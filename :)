@@ -1,0 +1,77 @@
+using System;
+
+namespace ChooseYourOwnAdventure
+{
+  class Program
+  {
+      static void Main(string[] args)
+    {
+      /* THE MYSTERIOUS NOISE */
+
+      // Start by asking for the user's name:
+      Console.Write("Cúal es tu nombre?: ");
+      string name = Console.ReadLine();
+      Console.WriteLine($"Hola, {name}! Bienvenid@ a nuestra historia.");
+
+     Console.WriteLine("\nComienza en una noche fría y lluviosa. Estás sentado en tu habitación y escuchas un ruido extraño en el pasillo.\nVas a investigar?");
+
+Console.WriteLine("\nPick YES or NOT: ");
+string noiseChoice = Console.ReadLine();
+string loudnoise = noiseChoice.ToUpper();
+
+if (loudnoise == "NOT")
+{
+  Console.WriteLine("No es una gran aventura sino salimos de nuestra habitación!\n THE END.");
+}
+else if (loudnoise == "YES")
+{
+  Console.WriteLine("\nCaminas por el pasillo y ves una luz salir debajo de una puerta al final del pasillo.\nCamina hacia ella.\nLa abres o llamas?");
+}
+Console.WriteLine("Pick OPEN or KNOCK: ");
+string doorChoice = Console.ReadLine();
+string doorChoicee = doorChoice.ToUpper();
+
+if (doorChoicee == "KNOCK")
+{
+  Console.WriteLine("\nUna voz detrás de la puerta habla. Dice,\n\"Responde este acertijo: \"\n\"Los pobres lo tienen.\nLos ricos lo necesitan.\nSi lo comes, mueres. \nQué es?");
+  Console.WriteLine("Escribe tu respuesta: ");
+  string riddleAnswer = Console.ReadLine();
+  string riddleAnswerr = riddleAnswer.ToUpper();
+
+  if (riddleAnswerr == "NOTHING")
+  {
+    Console.WriteLine("\nLa puerta se abre y no hay nada. \nApagas la luz y vuelves corriendo a tu habitación y cierras la puerta.\nTHE END.");
+  }
+
+  else if (riddleAnswerr != "NOTHING")
+  {
+    Console.WriteLine("\nRespondiste incorrectamente, la puerta no abre.\nTHE END.");
+  }
+}
+
+else if (doorChoicee == "OPEN")
+{
+  Console.WriteLine("\nLa puerta está cerrada!\n Mira si una de tus llaves la abre.");
+  Console.WriteLine("\nIngrese un número (1-3): ");
+  string keyChoice = Console.ReadLine();
+  string keyChoicee = keyChoice.ToUpper();
+
+  switch(keyChoicee)
+  {
+  case "1":
+    Console.WriteLine("\nEliges la primera llave.\nElección afortunada!\nLa puerta se abre y no hay nada.\nExtraño...\nTHE END.");
+    break;
+  case "2":
+    Console.WriteLine("Eliges la segunda llave.\nLa puerta no abre\nTHE END.");
+    break;
+  case "3":
+    Console.WriteLine("Eliges la tercera llave.\n La puerta no abre.\nTHE END.");
+    break;
+  
+
+  }
+}
+
+    }
+  }
+}
